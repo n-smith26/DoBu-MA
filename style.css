@@ -1,0 +1,49 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #ffffff;
+}
+
+.left-header {
+    display: flex;
+    align-items: center;
+    gap:10px;
+}
+
+.logo {
+    width: 200px;
+    height: auto;
+}
+
+.navbar {
+    display: flex;
+    gap: 40px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 16px;
+}
+
+.navbar a:hover {
+    color: rgb(255, 0, 0);
+}
+
+.right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.login {
+    text-decoration: none;
+    color: #000000;
+}
+
+.login:hover {
+    color: rgb(255, 0, 0);
+}
