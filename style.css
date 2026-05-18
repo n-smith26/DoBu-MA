@@ -60,3 +60,9 @@ html, body {
 .login:hover {
     color: rgb(255, 0, 0);
 }
+
+.container {
+    font-size: 20px;
+    max-width: 300px;   /* controls width */
+    padding: 10px;      /* adds spacing inside */
+}
