@@ -10,7 +10,7 @@ body {
     display: flex;
     flex-direction: column;
 }
-/* header styles */
+/* header styles - Nathan Smith */
 .header {
     display: flex;
     justify-content: space-between;
@@ -79,7 +79,7 @@ body {
     padding: 10px;   
 }
 
-/* footer styles */
+/* footer styles - Nathan Smith */
 .footer {
     background-color: #000000;
     color: #ffffff;
@@ -159,7 +159,7 @@ body {
 
 
 
-/* Login page styles */
+/* Login page styles - Nathan Smith*/
 .login-container {
     width: 100%;
     max-width: 400px;
@@ -238,7 +238,7 @@ body {
     text-decoration: underline;
     color:#ff0000;
 }
-/* Signup page styles */
+/* Signup page styles - Nathan Smith */
 .signup-container {
     width: 100%;
     max-width: 400px;
