@@ -230,3 +230,84 @@ body {
     cursor: pointer;
     transition: background-color 0.2s;
 }
+.signup-prompt {
+    text-align: center;
+    margin-top: 20px;
+}
+.signup-prompt a:hover {
+    text-decoration: underline;
+    color:#ff0000;
+}
+/* Signup page styles */
+.signup-container {
+    width: 100%;
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+.signup-header h2 {
+    margin: 0 0 10px;
+    text-align: center;
+    color: #000000;
+}
+.form-group {
+    margin-bottom: 20px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+}
+.form-options .remember-me {
+    display: flex;
+    align-items: center;
+}
+.form-options .remember-me input {
+    margin-right: 8px;
+}
+.form-options a {
+    color: #000000;
+    text-decoration: none;
+}
+.form-options a:hover {
+    text-decoration: underline;
+}
+.signup-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #ff0000;
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+.login-prompt {
+    text-align: center;
+    margin-top: 20px;
+}
+.login-prompt a:hover {
+    text-decoration: underline;
+    color:#ff0000;
+}
