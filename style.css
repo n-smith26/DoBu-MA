@@ -311,3 +311,73 @@ body {
     text-decoration: underline;
     color:#ff0000;
 }
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+@media (max-width: 768px) {
+
+    .header {
+        position: relative;
+        padding: 10px 15px;
+    }
+
+    .left-header {
+        padding-left: 0;
+    }
+
+    .right {
+        padding-right: 0;
+        gap: 15px;
+    }
+
+    .logo {
+        width: 70px;
+    }
+
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: #ffffff;
+        border-top: 1px solid #000000;
+        gap: 20px;
+        z-index: 1000;
+
+        /* Animation setup */
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        transition:
+            max-height 0.4s ease,
+            opacity 0.3s ease,
+            padding 0.3s ease;
+
+        padding: 0;
+    }
+
+    .navbar.active {
+        max-height: 300px;
+        opacity: 1;
+        padding: 15px 0;
+    }
+
+    .menu-toggle {
+        display: block;
+        font-size: 28px;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+    }
+
+    .menu-toggle:hover {
+        transform: rotate(90deg);
+    }
+
+    .login {
+        display: none;
+    }
+}
