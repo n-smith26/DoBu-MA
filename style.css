@@ -316,7 +316,7 @@ body {
     font-size: 24px;
     cursor: pointer;
 }
-@media (max-width: 768px) {
+@media (max-width: 850px) {
 
     .header {
         position: relative;
@@ -380,4 +380,21 @@ body {
     .login {
         display: none;
     }
+}
+/* Table styles - Nathan Smith */
+table {
+    margin: 20px auto;
+    width: 60%;
+    border-collapse: collapse;
+}
+table td {
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: px;
+}
+
+table td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
 }
