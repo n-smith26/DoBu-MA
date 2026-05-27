@@ -238,6 +238,7 @@ body {
     text-decoration: underline;
     color:#ff0000;
 }
+
 /* Signup page styles - Nathan Smith */
 .signup-container {
     width: 100%;
@@ -336,6 +337,7 @@ body {
 .slide.active {
     opacity: 1;
 }
+
 /* Table styles - Nathan Smith */
 table {
     margin: 20px auto;
@@ -352,4 +354,28 @@ table td {
     border: 1px solid #dddddd;
     text-align: left;
     padding: 8px;
+}
+
+@media (max-width: 850px) {
+    .navbar {
+        display: none;
+        flex-direction: column;
+        background-color: #ffffff;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+    
+    .navbar.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+        font-size: 24px;
+        cursor: pointer;
+    }
 }
