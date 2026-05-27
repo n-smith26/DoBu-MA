@@ -336,3 +336,20 @@ body {
 .slide.active {
     opacity: 1;
 }
+/* Table styles - Nathan Smith */
+table {
+    margin: 20px auto;
+    width: 60%;
+    border-collapse: collapse;
+}
+table th {
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 8px;
+}
+
+table td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
