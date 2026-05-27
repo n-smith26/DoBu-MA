@@ -355,7 +355,9 @@ table td {
     text-align: left;
     padding: 8px;
 }
-
+.menu-toggle {
+    display: none;
+}
 @media (max-width: 850px) {
     .navbar {
         display: none;
