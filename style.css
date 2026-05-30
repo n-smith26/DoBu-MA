@@ -542,3 +542,71 @@ table td {
     position: absolute;
     right: 20px;
 }
+
+/* TEAM HERO */
+.team-hero {
+    text-align: center;
+    padding: 60px 0 20px;
+}
+
+.team-hero h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+/* TEAM GRID */
+.team-grid {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    padding: 40px 0;
+}
+
+/* TEAM CARD */
+.team-card {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.team-card img {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.team-card h2 {
+    margin: 10px 0 5px;
+    font-size: 1.5rem;
+}
+
+.team-card h3 {
+    margin: 0 0 10px;
+    font-size: 1rem;
+    color: #777;
+}
+
+.team-card p {
+    font-size: 0.95rem;
+    line-height: 1.4rem;
+}
+
+/* RESPONSIVE GRID */
+@media (max-width: 900px) {
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+}
