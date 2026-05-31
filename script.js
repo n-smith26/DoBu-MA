@@ -72,3 +72,65 @@ function prevSlide() {
 /* REQUIRED FOR BUTTONS TO WORK */
 window.nextSlide = nextSlide;
 window.prevSlide = prevSlide;
+
+
+document.getElementById("contactForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const firstName = document.getElementById("firstName").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const enquiry = document.getElementById("enquiry").value.trim();
+    const errorMessage = document.getElementById("errorMessage");
+
+    // Reset error message
+    errorMessage.style.display = "none";
+    errorMessage.style.color = "red";
+    errorMessage.textContent = "";
+
+    // Swear words list
+    const bannedWords = ["fuck", "shit", "bitch", "cunt", "bastard", "wanker"];
+
+    // First name required
+    if (firstName === "") {
+        errorMessage.textContent = "Submission failed: Please enter your first name.";
+        errorMessage.style.display = "block";
+        return;
+    }
+
+    // Email required
+    if (email === "") {
+        errorMessage.textContent = "Submission failed: An email address is required.";
+        errorMessage.style.display = "block";
+        return;
+    }
+
+    // Email must contain @ and look real
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(email)) {
+        errorMessage.textContent = "Submission failed: Please enter a valid email address containing '@'.";
+        errorMessage.style.display = "block";
+        return;
+    }
+
+    // Enquiry required
+    if (enquiry === "") {
+        errorMessage.textContent = "Submission failed: Please provide details about your enquiry.";
+        errorMessage.style.display = "block";
+        return;
+    }
+
+    // Check for swear words
+    const enquiryLower = enquiry.toLowerCase();
+    for (let word of bannedWords) {
+        if (enquiryLower.includes(word)) {
+            errorMessage.textContent = "Submission failed: Please remove inappropriate language from your enquiry.";
+            errorMessage.style.display = "block";
+            return;
+        }
+    }
+
+    // If everything is valid
+    errorMessage.style.color = "green";
+    errorMessage.textContent = "Your enquiry has been submitted successfully.";
+    errorMessage.style.display = "block";
+});

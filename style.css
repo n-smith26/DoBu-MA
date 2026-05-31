@@ -610,3 +610,169 @@ table td {
         grid-template-columns: 1fr;
     }
 }
+/* TIMETABLE HERO SECTION */
+.timetable-hero {
+    width: 100%;
+    padding: 40px 5%;
+    background-color: #f5f5f5;
+    text-align: center;
+}
+
+.timetable-hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+/* TIMETABLE TABLE */
+.timetable-container {
+    overflow-x: auto;
+}
+
+.timetable {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    font-size: 1rem;
+}
+
+.timetable th,
+.timetable td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+    min-width: 140px;
+}
+
+.timetable th {
+    background-color: #000;
+    color: white;
+    font-weight: bold;
+}
+
+.timetable tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.timetable tr:hover {
+    background-color: #eee;
+}
+
+/* CONTACT PAGE HERO STRIP */
+.contact-hero-strip {
+    width: 100%;
+    background-color: #000000;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.contact-hero-strip h1 {
+    color: #ffffff;
+    font-size: 3rem;
+    margin: 0;
+}
+
+/* CONTACT PAGE LAYOUT */
+.contact-row {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 40px 5%;
+    gap: 40px;
+}
+
+/* LEFT FORM BOX */
+.contact-form-box {
+    width: 55%;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.contact-form-box form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form-box label {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.contact-form-box input,
+.contact-form-box textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.contact-form-box textarea {
+    height: 120px;
+    resize: none;
+}
+
+.contact-form-box button {
+    margin-top: 10px;
+    padding: 12px;
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+/* RIGHT SUPPORT BOX */
+.contact-support-box {
+    width: 35%;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.contact-support-box p {
+    font-size: 1.3rem;
+    line-height: 1.8rem;
+    color: #333;
+}
+
+/* CLICKABLE PHONE NUMBER */
+.contact-phone {
+    color: #000000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-phone:hover {
+    color: red;
+    text-decoration: underline;
+}
+
+/* ERROR MESSAGE */
+.error-text {
+    color: red;
+    font-size: 1rem;
+    margin-top: -5px;
+    margin-bottom: 10px;
+    display: none;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .contact-row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-form-box,
+    .contact-support-box {
+        width: 90%;
+    }
+}
