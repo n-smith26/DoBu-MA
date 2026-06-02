@@ -1,3 +1,16 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  outline: none;
+  scroll-behavior: smooth;
+}
+
+html {
+    scroll-behavior: smooth;
+}
 html, body {
     margin: 0;
     padding: 0;
@@ -10,6 +23,7 @@ body {
     display: flex;
     flex-direction: column;
 }
+
 /* header styles - Nathan Smith */
 .header {
     position: relative;
@@ -80,12 +94,14 @@ body {
     padding: 10px;   
 }
 
-/* footer styles - Nathan Smith */
 .footer {
-    background-color: #000000;
+    width: 100%;
+    background-color: #000;
     color: #ffffff;
-    padding: 40px 20px 10px;
+    padding: 40px 0 10px; /* removed left/right padding */
+    margin-top: auto;
 }
+
 .footer-content {
     display: flex;
     justify-content: space-between;
@@ -153,11 +169,6 @@ body {
     align-items: flex-start;
     width: 45%;
 }
-.footer {
-    margin-top: auto;
-}
-
-
 
 
 /* Login page styles - Nathan Smith*/
@@ -313,31 +324,6 @@ body {
     text-decoration: underline;
     color:#ff0000;
 }
-.hero {
-    width: 100%;
-    height: 450px;
-    position: relative;
-    overflow: hidden;
-}
-
-.slideshow-container {
-    width: 100%;
-    height: 100%;
-    position: relative;
-}
-
-.slide {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: absolute;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-}
-
-.slide.active {
-    opacity: 1;
-}
 
 /* Table styles - Nathan Smith */
 table {
@@ -360,8 +346,10 @@ table td {
 .menu-toggle {
     display: none;
 }
+@media (max-width: 850px) {
 .mobile-login {
     display: none;
+}
 }
 
 @media (max-width: 900px) {
@@ -378,14 +366,18 @@ table td {
         display: none;
         flex: none;
         flex-direction: column;
+        background-color: #ffffff;
         position: absolute;
+        top: 60px;
         top: 100%;
         left: 0;
         width: 100%;
+        text-align: center;
         background: white;
         padding: 10px 0;
         z-index: 999;
     }
+    
 
     .navbar.active {
         display: flex;
@@ -399,20 +391,8 @@ table td {
         cursor: pointer;
     }
 
-    .mobile-login {
-        display: block;
-        font-weight: bold;
-        border-top: 1px solid #ddd;
-        padding-top: 15px;
-    }
 }
-
-/* HERO SECTION */
-.hero {
-    padding: 80px 0;
-    min-height: 500px;
-}
-
+    
 /* SLIDER */
 .offer-slider {
     width: 100%;
@@ -582,53 +562,6 @@ table td {
         grid-template-columns: 1fr;
     }
 }
-/* TIMETABLE HERO SECTION */
-.timetable-hero {
-    width: 100%;
-    padding: 40px 5%;
-    background-color: #f5f5f5;
-    text-align: center;
-}
-
-.timetable-hero h1 {
-    font-size: 2.5rem;
-    margin-bottom: 30px;
-}
-
-/* TIMETABLE TABLE */
-.timetable-container {
-    overflow-x: auto;
-}
-
-.timetable {
-    width: 100%;
-    border-collapse: collapse;
-    background: white;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    font-size: 1rem;
-}
-
-.timetable th,
-.timetable td {
-    border: 1px solid #ddd;
-    padding: 12px;
-    text-align: center;
-    min-width: 140px;
-}
-
-.timetable th {
-    background-color: #000;
-    color: white;
-    font-weight: bold;
-}
-
-.timetable tr:nth-child(even) {
-    background-color: #f9f9f9;
-}
-
-.timetable tr:hover {
-    background-color: #eee;
-}
 
 /* CONTACT PAGE HERO STRIP */
 .contact-hero-strip {
@@ -752,7 +685,7 @@ table td {
 /* HOME HERO SECTION */
 .home-hero {
     width: 100%;
-    height: 1500px;
+    height: 150vh;
     background: url("img/DoBu-Dojo.png") center/cover no-repeat;
     display: flex;
     justify-content: center;
@@ -761,7 +694,6 @@ table td {
     position: relative;
 }
 
-/* Dark overlay */
 .home-hero::before {
     content: "";
     position: absolute;
@@ -772,7 +704,6 @@ table td {
     background: rgba(0,0,0,0.55);
 }
 
-/* Text */
 .home-hero-content {
     position: relative;
     color: white;
@@ -790,7 +721,6 @@ table td {
     margin-bottom: 25px;
 }
 
-/* Button */
 .hero-btn {
     display: inline-block;
     padding: 18px 40px;
@@ -805,8 +735,6 @@ table td {
 .hero-btn:hover {
     background: #b30000;
 }
-
-
 /* TESTIMONIAL SECTION */
 .testimonials {
     width: 80%;
@@ -820,12 +748,10 @@ table td {
     margin-bottom: 40px;
 }
 
-/* Each testimonial block */
 .testimonial {
     margin-bottom: 35px;
 }
 
-/* Name ABOVE the quote */
 .testimonial .name {
     display: block;
     font-size: 1.2rem;
@@ -834,10 +760,94 @@ table td {
     margin-bottom: 8px;
 }
 
-/* Quote text */
 .testimonial p {
     font-size: 1.1rem;
     line-height: 1.6rem;
     font-style: italic;
     color: #333;
 }
+
+/* ============================================================
+   FINAL TIMETABLE LAYOUT (IDENTICAL TO YOUR IMAGE)
+   ============================================================ */
+
+.timetable-hero {
+    width: 100%;
+    padding: 40px;
+    background: #f5f5f5;
+    text-align: center;
+
+}
+
+.timetable-container {
+    width: 100%;
+}
+
+.timetable {
+    width: 80%;
+    border-collapse: collapse;
+    background: white;
+    font-size: 1rem;
+    table-layout: fixed;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    align-items: center;
+}
+
+.timetable th,
+.timetable td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+    word-wrap: break-word;
+}
+
+.timetable th {
+    background: #000;
+    color: #fff;
+    font-weight: bold;
+}
+
+.timetable tr:nth-child(even) {
+    background: #f9f9f9;
+}
+
+.timetable tr:hover {
+    background: #eee;
+}
+
+/* ============================================================
+   FINAL FOOTER FIX — FULL WIDTH BLACK STRIP
+   ============================================================ */
+
+.footer {
+    width: 100%;
+    background: #000;
+    color: #fff;
+    padding: 40px 0 10px;
+    margin-top: auto;
+}
+
+.footer-content {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 20px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+    margin: 20px;
+}
+
+.footer-bottom {
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid #333;
+    padding-top: 10px;
+    margin-top: 20px;
+}
+
