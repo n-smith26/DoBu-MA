@@ -346,13 +346,17 @@ table td {
 .menu-toggle {
     display: none;
 }
-@media (max-width: 850px) {
 .mobile-login {
     display: none;
 }
+
+@media (max-width: 1292px) {
+.mobile-login {
+    display: block;
+}
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1292px) {
 
     .header {
         position: relative;
